@@ -1,4 +1,4 @@
-**FreeCodeCamp**- Information Security and Quality Assurance
+**FreeCodeCamp** - Information Security and Quality Assurance
 ------
 
 1) SET NODE_ENV to `test` without quotes
