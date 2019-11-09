@@ -18,6 +18,12 @@ app.use(cors({origin: '*'})); //For FCC testing purposes only
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var helmet = require('helmet');
+app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }));
+app.use(helmet.frameguard({'action': 'deny'}));
+app.use(helmet.xssFilter());
+app.use(helmet.noSniff());
+
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
